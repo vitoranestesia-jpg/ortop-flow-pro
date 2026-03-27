@@ -14,7 +14,132 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      casos_cirurgicos: {
+        Row: {
+          anestesista_crm: string | null
+          anestesista_nome: string | null
+          carater: string
+          carteirinha: string
+          cid_principal: string
+          cirurgiao_crm: string
+          cirurgiao_nome: string
+          classificacao_asa: string
+          codigo_anvisa: string
+          codigo_tuss: string
+          complicacoes: string
+          created_at: string
+          custo_exames: number
+          data_admissao: string
+          data_alta: string
+          data_cirurgia: string
+          data_nascimento: string
+          data_obito: string | null
+          data_reinternacao: string | null
+          descricao_implante: string
+          dias_enfermaria: number
+          dias_uti: number
+          fornecedor_opme: string
+          honorario_anestesia: number
+          honorario_equipe: number
+          hospital_id: string
+          id: string
+          id_paciente: string
+          motivo_reinternacao: string | null
+          reinternacao_30d: boolean
+          sexo: string
+          status_alta: string
+          tipo_procedimento: string
+          tipo_rede: string
+          valor_cobrado: number
+          valor_diaria_enfermaria: number
+          valor_diaria_uti: number
+          valor_glosado: number
+          valor_opme: number
+        }
+        Insert: {
+          anestesista_crm?: string | null
+          anestesista_nome?: string | null
+          carater: string
+          carteirinha: string
+          cid_principal: string
+          cirurgiao_crm: string
+          cirurgiao_nome: string
+          classificacao_asa: string
+          codigo_anvisa?: string
+          codigo_tuss: string
+          complicacoes?: string
+          created_at?: string
+          custo_exames?: number
+          data_admissao: string
+          data_alta: string
+          data_cirurgia: string
+          data_nascimento: string
+          data_obito?: string | null
+          data_reinternacao?: string | null
+          descricao_implante?: string
+          dias_enfermaria?: number
+          dias_uti?: number
+          fornecedor_opme?: string
+          honorario_anestesia?: number
+          honorario_equipe?: number
+          hospital_id: string
+          id?: string
+          id_paciente: string
+          motivo_reinternacao?: string | null
+          reinternacao_30d?: boolean
+          sexo: string
+          status_alta: string
+          tipo_procedimento: string
+          tipo_rede: string
+          valor_cobrado?: number
+          valor_diaria_enfermaria?: number
+          valor_diaria_uti?: number
+          valor_glosado?: number
+          valor_opme?: number
+        }
+        Update: {
+          anestesista_crm?: string | null
+          anestesista_nome?: string | null
+          carater?: string
+          carteirinha?: string
+          cid_principal?: string
+          cirurgiao_crm?: string
+          cirurgiao_nome?: string
+          classificacao_asa?: string
+          codigo_anvisa?: string
+          codigo_tuss?: string
+          complicacoes?: string
+          created_at?: string
+          custo_exames?: number
+          data_admissao?: string
+          data_alta?: string
+          data_cirurgia?: string
+          data_nascimento?: string
+          data_obito?: string | null
+          data_reinternacao?: string | null
+          descricao_implante?: string
+          dias_enfermaria?: number
+          dias_uti?: number
+          fornecedor_opme?: string
+          honorario_anestesia?: number
+          honorario_equipe?: number
+          hospital_id?: string
+          id?: string
+          id_paciente?: string
+          motivo_reinternacao?: string | null
+          reinternacao_30d?: boolean
+          sexo?: string
+          status_alta?: string
+          tipo_procedimento?: string
+          tipo_rede?: string
+          valor_cobrado?: number
+          valor_diaria_enfermaria?: number
+          valor_diaria_uti?: number
+          valor_glosado?: number
+          valor_opme?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
