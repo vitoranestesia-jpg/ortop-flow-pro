@@ -7,9 +7,12 @@ import {
   FileUp,
   TrendingUp,
   User,
+  LogOut,
 } from 'lucide-react';
 import { NavLink } from '@/components/NavLink';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
 import {
   Sidebar,
   SidebarContent,
@@ -36,6 +39,13 @@ export function AppSidebar() {
   const { state } = useSidebar();
   const collapsed = state === 'collapsed';
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    toast.success('Logout realizado com sucesso');
+    navigate('/login');
+  };
 
   return (
     <Sidebar collapsible="icon">
@@ -82,6 +92,12 @@ export function AppSidebar() {
                 <User className="mr-2 h-4 w-4 shrink-0" />
                 {!collapsed && <span>Meu Perfil</span>}
               </NavLink>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton onClick={handleLogout} className="hover:bg-sidebar-accent text-destructive hover:text-destructive cursor-pointer">
+              <LogOut className="mr-2 h-4 w-4 shrink-0" />
+              {!collapsed && <span>Sair</span>}
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
