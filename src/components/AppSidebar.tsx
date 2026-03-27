@@ -4,6 +4,7 @@ import {
   FilePlus,
   BarChart3,
   Download,
+  FileUp,
   TrendingUp,
   User,
 } from 'lucide-react';
@@ -27,6 +28,7 @@ const navItems = [
   { title: 'Novo Caso', url: '/novo-caso', icon: FilePlus },
   { title: 'Relatórios', url: '/relatorios', icon: BarChart3 },
   { title: 'Exportar Dados', url: '/exportar', icon: Download },
+  { title: 'Importar Dados', url: '/importar', icon: FileUp },
   { title: 'Predição', url: '/predicao', icon: TrendingUp },
 ];
 
