@@ -324,7 +324,7 @@ export default function ImportData() {
   const canImport = pendingLow === 0 && approvedCount > 0;
 
   const handleImport = async () => {
-    const toImport = extracted.filter(c => c.approved || (c.overallConfidence === 'alta' && c.overallConfidence !== 'erro'));
+    const toImport = extracted.filter(c => c.approved || c.overallConfidence === 'alta');
     let count = 0;
     for (const ec of toImport) {
       const f = ec.fields;
