@@ -592,7 +592,7 @@ export default function ImportData() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
               <span className="font-medium text-foreground">{extracted.length}</span> casos extraídos —{' '}
-              <span className="font-medium text-emerald-400">{approvedCount + extracted.filter(c => c.overallConfidence === 'alta' && !c.approved).length}</span> prontos para importar —{' '}
+              <span className="font-medium text-emerald-400">{approvedCount + extracted.filter(c => c.overallConfidence === 'alta').filter(c => !c.approved).length}</span> prontos para importar —{' '}
               <span className="font-medium text-amber-400">{needsReview}</span> precisam de revisão
             </p>
             <div className="flex gap-2">
