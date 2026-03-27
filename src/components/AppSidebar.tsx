@@ -3,6 +3,7 @@ import {
   ClipboardList,
   FilePlus,
   BarChart3,
+  Download,
   TrendingUp,
   User,
 } from 'lucide-react';
@@ -25,6 +26,7 @@ const navItems = [
   { title: 'Casos', url: '/casos', icon: ClipboardList },
   { title: 'Novo Caso', url: '/novo-caso', icon: FilePlus },
   { title: 'Relatórios', url: '/relatorios', icon: BarChart3 },
+  { title: 'Exportar Dados', url: '/exportar', icon: Download },
   { title: 'Predição', url: '/predicao', icon: TrendingUp },
 ];
 
