@@ -11,6 +11,7 @@ import NewCase from "./pages/NewCase";
 import CaseDetail from "./pages/CaseDetail";
 import Reports from "./pages/Reports";
 import ExportData from "./pages/ExportData";
+import ImportData from "./pages/ImportData";
 import Prediction from "./pages/Prediction";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
@@ -42,6 +43,7 @@ function ProtectedRoutes() {
           <Route path="/caso/:id" element={<CaseDetail />} />
               <Route path="/relatorios" element={<Reports />} />
               <Route path="/exportar" element={<ExportData />} />
+              <Route path="/importar" element={<ImportData />} />
               <Route path="/predicao" element={<Prediction />} />
           <Route path="/perfil" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
