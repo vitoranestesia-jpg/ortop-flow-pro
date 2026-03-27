@@ -133,6 +133,7 @@ export default function Cases() {
                     <th className="text-left p-3">Tipo Proc.</th>
                     <th className="text-left p-3">Data Cirurgia</th>
                     <th className="text-left p-3">Caráter</th>
+                    <th className="text-left p-3">Equipe Cirúrgica</th>
                     <th className="text-right p-3">Custo Total</th>
                     <th className="text-right p-3">Tempo Int.</th>
                     <th className="text-center p-3">Status</th>
@@ -147,6 +148,7 @@ export default function Cases() {
                       <td className="p-3">{c.tipoProcedimento}</td>
                       <td className="p-3">{new Date(c.dataCirurgia).toLocaleDateString('pt-BR')}</td>
                       <td className="p-3">{c.carater}</td>
+                      <td className="p-3">{c.cirurgiao.nome}</td>
                       <td className="text-right p-3 font-mono">{fmt(calcCustoTotal(c))}</td>
                       <td className="text-right p-3">{calcTempoInternacao(c.dataAdmissao, c.dataAlta)}d</td>
                       <td className="text-center p-3">{statusBadge(c.statusAlta)}</td>
